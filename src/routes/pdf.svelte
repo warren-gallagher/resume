@@ -28,8 +28,8 @@
 <script lang="ts" >
     import {onMount} from 'svelte';
     import { Button } from 'sveltestrap';
-    import pdfMake from 'pdfmake/build/pdfmake';
-    import pdfFonts from 'pdfmake/build/vfs_fonts';
+    import * as pdfMake from 'pdfmake/build/pdfmake';
+    import * as pdfFonts from 'pdfmake/build/vfs_fonts';
 
      
     export let contact: Contact;
