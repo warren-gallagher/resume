@@ -17,6 +17,16 @@ The code is written in TypeScript targeting the [SvelteKit](https://kit.svelte.d
 ```
 git clone git@github.com:warren-gallagher/resume.git
 ```
+### To customize to different resume data
+
+To customize the content of the resume, modify the following files:
+
+* src/lib/models/Config.ts
+* src/lib/models/Contact.ts
+* src/lib/models/Experience.ts
+* src/lib/models/Profile.ts
+* src/lib/models/Technology.ts
+* static/avatar-photo-400x400.jpg
 
 ### Install developer dependencies
 ```

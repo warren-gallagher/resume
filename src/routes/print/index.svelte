@@ -1,10 +1,10 @@
 <script context="module" lang="ts">
+    import {getConfig} from '$lib/models/Config';
+    import type {Config} from '$lib/models/Config';
     import {getContact} from '$lib/models/Contact';
     import type {Contact} from '$lib/models/Contact';
     import {getProfile} from '$lib/models/Profile';
     import type {Profile} from '$lib/models/Profile';
-    import {getProjects} from '$lib/models/Project';
-    import type {Project} from '$lib/models/Project';
     import {getExperience} from '$lib/models/Experience';
     import type {Experience} from '$lib/models/Experience';
     import {getTechnologies} from '$lib/models/Technology';
@@ -15,9 +15,9 @@
         return {
             status: 200,
             props: {
+                config: getConfig(),
                 contact: getContact(),
                 profile: getProfile(),
-                projects: getProjects(),
                 experience: getExperience(),
                 technologies: getTechnologies()
             }
@@ -30,6 +30,7 @@
     import { Container, Table, Button, Icon } from 'sveltestrap';
     import SvelteMarkdown from 'svelte-markdown';
 
+    export let config : Config;
     export let contact: Contact;
     export let profile: Profile;
     export let experience: Experience[];
@@ -96,7 +97,7 @@
             </Container>
         {/each}
 
-        <p class="text-center text-sm">Printable Resume generated from interactive resume web site at https://resume.gallaghers.ca</p>
-        <p class="text-center text-sm"><Icon name="github" /> repository available at https://github.com/warren-gallagher/resume</p>
+        <p class="text-center text-sm">Printable Resume generated from interactive resume web site at {config.deploymentURL}</p>
+        <p class="text-center text-sm"><Icon name="github" /> repository available at {config.repositoryURL}</p>
     </Container>
 </div>
