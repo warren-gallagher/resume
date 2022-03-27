@@ -22,36 +22,33 @@
 <svelte:head>
 </svelte:head>
 
-<Navbar color="light" light expand="md">
-    <NavbarBrand href="/contact" >Warren Gallagher</NavbarBrand>
+<Navbar color="primary" light expand="md">
+    <NavbarBrand class="text-white" href="/contact" >Warren Gallagher</NavbarBrand>
     <NavbarToggler on:click={toggleNavbarClicked} />
     <Collapse bind:isOpen={menuIsOpen} navbar expand="md" on:update={handleCollapseUpdateEvent}>
         <Nav class="ms-auto" navbar>
-            <NavItem>
-                <NavLink href="/">Profile</NavLink>
-            </NavItem>
-            <!--NavItem>
-                <NavLink href="/key-projects">Key Projects</NavLink>
-            </NavItem-->
-            <NavItem>
-                <NavLink href="/experience">Experience</NavLink>
+            <NavItem >
+                <NavLink class="text-white" href="/">Profile</NavLink>
             </NavItem>
             <NavItem>
-                <NavLink href="/technologies">Technologies</NavLink>
+                <NavLink class="text-white" href="/experience">Experience</NavLink>
             </NavItem>
             <NavItem>
-                <NavLink href="/contact">Contact</NavLink>
+                <NavLink class="text-white" href="/technologies">Technologies</NavLink>
             </NavItem>
             <NavItem>
-                <NavLink href="/print" target="_blank">Print</NavLink>
+                <NavLink class="text-white" href="/contact">Contact</NavLink>
             </NavItem>
             <NavItem>
-                <NavLink href="/about" on:click={aboutClicked}><Icon name="info-circle"/></NavLink>
+                <NavLink class="text-white" href="/print" target="_blank">Print</NavLink>
+            </NavItem>
+            <NavItem>
+                <NavLink class="text-white" href="/about" on:click={aboutClicked}><Icon name="info-circle"/></NavLink>
             </NavItem>
         </Nav>
     </Collapse>
 </Navbar>
-<DropdownItem divider />
+
 <Container fluid >
     <slot>
 
