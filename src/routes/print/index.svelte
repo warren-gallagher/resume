@@ -96,7 +96,7 @@
             </Container>
         {/each}
 
-        <p class="text-center text-sm">Printable Resume generated from interactive resume web site at https://gallaghers.ca</p>
+        <p class="text-center text-sm">Printable Resume generated from interactive resume web site at https://resume.gallaghers.ca</p>
         <p class="text-center text-sm"><Icon name="github" /> repository available at https://github.com/warren-gallagher/resume</p>
     </Container>
 </div>
