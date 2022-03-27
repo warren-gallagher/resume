@@ -34,9 +34,7 @@
   },
   "type": "module",
   "dependencies": {
-    "@types/pdfmake": "^0.1.21",
     "env-cmd": "^10.1.0",
-    "pdfmake": "^0.2.4",
     "svelte-markdown": "^0.2.2",
     "sveltestrap": "^5.9.0"
   }

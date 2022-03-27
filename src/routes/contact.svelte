@@ -35,15 +35,15 @@
 <div class="text-center">
 <h3>{contact.name} - Contact</h3>
 
-<img class="img-circle" alt={`${contact.name} Photo`} src="/avatar-photo-400x400.jpg" />
+<img alt={`${contact.name} Photo`} src="/avatar-photo-400x400.jpg" />
 
 <Table>
     <tbody>
         <tr>
-            <td><Icon name="envelope"/><a href={contact.emailURL}>{` ${contact.emailAddr}`}</a></td>
+            <td><Icon name="envelope-fill"/><a href={contact.emailURL}>{` ${contact.emailAddr}`}</a></td>
         </tr>
         <tr>
-            <td><Icon name="telephone"/><a href={`tel:${contact.mobilePhone}`}>{contact.mobilePhone}</a></td>
+            <td><Icon name="telephone-fill"/><a href={`tel:${contact.mobilePhone}`}>{contact.mobilePhone}</a></td>
         </tr>
         <tr>
             <td><Icon name="github"/><a href={contact.githubURL} target="_blank" >{contact.githubURL}</a></td>

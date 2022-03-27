@@ -20,21 +20,6 @@
 </script>
 
 <svelte:head>
-    <title>Resume - Warren Gallagher</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <style>
-        /* prevent bootstrap from drawing the blue glow around input fields when in focus */
-        .form-control:focus {
-            box-shadow: none; 
-        }
-        .input-group-text {
-            background-color: white;
-            border: none;
-            right: 
-        }
-
-    </style>
 </svelte:head>
 
 <Navbar color="light" light expand="md">
@@ -58,7 +43,7 @@
                 <NavLink href="/contact">Contact</NavLink>
             </NavItem>
             <NavItem>
-                <NavLink href="/pdf">PDF</NavLink>
+                <NavLink href="/print" target="_blank">Print</NavLink>
             </NavItem>
             <NavItem>
                 <NavLink href="/about" on:click={aboutClicked}><Icon name="info-circle"/></NavLink>
