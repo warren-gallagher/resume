@@ -9,6 +9,7 @@ The code is written in TypeScript targeting the [SvelteKit](https://kit.svelte.d
 * SvelteKit - [https://kit.svelte.dev](https://kit.svelte.dev)
 * SvelteStrap - [https://sveltestrap.js.org](https://sveltestrap.js.org)
 * Bootstrap - [https://getbootstrap.com](https://getbootstrap.com)
+* Vercel = [https://vercel.com](https://vercel.com)
 
 ## Developing
 
@@ -47,4 +48,4 @@ npm run build
 
 ### Run on Vercel
 
-Commits to the main branch will be automatically built and deployed on Vercel. The deployed app can be reached at: [https://gallaghers.ca](https://gallaghers.ca)
+Commits to the main branch will be automatically built and deployed on Vercel. The deployed app can be reached at: [https://resume.gallaghers.ca](https://resume.gallaghers.ca)
