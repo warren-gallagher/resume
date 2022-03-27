@@ -24,7 +24,7 @@
 
 <Navbar color="primary" light expand="md">
     <NavbarBrand class="text-white" href="/contact" >Warren Gallagher</NavbarBrand>
-    <NavbarToggler on:click={toggleNavbarClicked} />
+    <NavbarToggler class="bg-white" on:click={toggleNavbarClicked} />
     <Collapse bind:isOpen={menuIsOpen} navbar expand="md" on:update={handleCollapseUpdateEvent}>
         <Nav class="ms-auto" navbar>
             <NavItem >
