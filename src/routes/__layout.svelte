@@ -28,16 +28,16 @@
     <Collapse bind:isOpen={menuIsOpen} navbar expand="md" on:update={handleCollapseUpdateEvent}>
         <Nav class="ms-auto" navbar>
             <NavItem >
-                <NavLink class="text-white" href="/">Profile</NavLink>
+                <NavLink class="text-white" href="/">Contact</NavLink>
+            </NavItem>
+            <NavItem>
+                <NavLink class="text-white" href="/profile">Profile</NavLink>
             </NavItem>
             <NavItem>
                 <NavLink class="text-white" href="/experience">Experience</NavLink>
             </NavItem>
             <NavItem>
                 <NavLink class="text-white" href="/technologies">Technologies</NavLink>
-            </NavItem>
-            <NavItem>
-                <NavLink class="text-white" href="/contact">Contact</NavLink>
             </NavItem>
             <NavItem>
                 <NavLink class="text-white" href="/print" target="_blank">Print</NavLink>
