@@ -45,8 +45,8 @@
 </script>
 
 <style>
-    .font-size-sm {
-        font-size: smaller;
+    .font-size-xs {
+        font-size: x-small;
     }
     img {
         object-fit: cover;
@@ -60,7 +60,7 @@
     <Container>
         <h4 class="text-primary text-center">{contact.name}</h4>
         <Container>
-            <div class="font-size-sm text-center" >
+            <div class="font-size-xs text-center" >
                 <img class="img-circle" alt={`${contact.name} Photo`} src="/avatar-photo-400x400.jpg" />
                 <div class="pt-2"><Icon name="envelope-fill"></Icon><span class="pl-2">{contact.emailAddr}</span></div>
                 <div class="pt-2"><Icon name="telephone-fill"></Icon><span class="pl-2">{contact.mobilePhone}</span></div>
@@ -72,7 +72,7 @@
 
         <h5 class="pt-2 text-primary underline text-center"><u>Profile</u></h5>
         <Container>
-            <div class="font-size-sm" >
+            <div class="font-size-xs" >
                 <SvelteMarkdown source={profile.markdown} />
             </div>
         </Container>
@@ -81,7 +81,7 @@
         {#each experience as experienceItem}
             <h6 class="text-primary">{experienceItem.companyName} - {experienceItem.workTitle} : {experienceItem.workDuration}</h6>
             <Container>
-                <div class="font-size-sm" >
+                <div class="font-size-xs" >
                     <SvelteMarkdown source={experienceItem.markdown} />
                 </div>
             </Container>
@@ -91,13 +91,13 @@
         {#each technologies as technology}
             <h6 class="text-primary">{technology.category}</h6>
             <Container class="text-sm">
-                <div class="font-size-sm" >
+                <div class="font-size-xs" >
                     <SvelteMarkdown source={technology.markdown} />
                 </div>
             </Container>
         {/each}
 
-        <p class="text-center text-sm">Printable Resume generated from interactive resume web site at {config.deploymentURL}</p>
-        <p class="text-center text-sm"><Icon name="github" /> repository available at {config.repositoryURL}</p>
+        <p class="text-center font-size-xs">Printable Resume generated from interactive resume web site at {config.deploymentURL}</p>
+        <p class="text-center font-size-xs"><Icon name="github" /> repository available at {config.repositoryURL}</p>
     </Container>
 </div>
