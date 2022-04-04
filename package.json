@@ -1,6 +1,6 @@
 {
   "name": "resume",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "scripts": {
     "version": "./version.mjs",
     "dev": "env-cmd -f .env-dev svelte-kit dev",
