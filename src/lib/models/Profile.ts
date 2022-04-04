@@ -29,6 +29,6 @@ Over the years I have represented many companies as a public speaker at conferen
 `,
 };
 
-export function getProfile() : Profile {
+export async function getProfile() : Promise<Profile> {
     return profile;
 }

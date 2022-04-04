@@ -9,8 +9,8 @@
         return {
             status: 200,
             props: {
-                contact: getContact(),
-                technologies: getTechnologies()
+                contact: await getContact(),
+                technologies: await getTechnologies()
             }
         };
     }

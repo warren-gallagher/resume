@@ -20,6 +20,6 @@ const contact: Contact = {
     mobilePhone: "613.791.4987"
 };
 
-export function getContact() : Contact {
+export async function getContact() : Promise<Contact> {
     return contact;
 }

@@ -8,6 +8,6 @@ const contact: Config = {
     repositoryURL: "https://github.com/warren-gallagher/resume/"
 };
 
-export function getConfig() : Config {
+export async function getConfig() : Promise<Config> {
     return contact;
 }

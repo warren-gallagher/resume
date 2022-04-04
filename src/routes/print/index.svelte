@@ -15,11 +15,11 @@
         return {
             status: 200,
             props: {
-                config: getConfig(),
-                contact: getContact(),
-                profile: getProfile(),
-                experience: getExperience(),
-                technologies: getTechnologies()
+                config: await getConfig(),
+                contact: await getContact(),
+                profile: await getProfile(),
+                experience: await getExperience(),
+                technologies: await getTechnologies()
             }
         };
     }

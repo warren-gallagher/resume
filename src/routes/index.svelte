@@ -7,7 +7,7 @@
         return {
             status: 200,
             props: {
-                contact: getContact()
+                contact: await getContact()
             }
         };
     }

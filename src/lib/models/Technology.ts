@@ -98,6 +98,6 @@ Numerous proprietary protocols
     }
 ];
 
-export function getTechnologies() : Technology[] {
+export async function getTechnologies() : Promise<Technology[]> {
     return technologies;
 }

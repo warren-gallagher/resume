@@ -9,8 +9,8 @@
         return {
             status: 200,
             props: {
-                contact: getContact(),
-                profile: getProfile()
+                contact: await getContact(),
+                profile: await getProfile()
             }
         };
     }

@@ -9,8 +9,8 @@
         return {
             status: 200,
             props: {
-                contact: getContact(),
-                experience: getExperience()
+                contact: await getContact(),
+                experience: await getExperience()
             }
         };
     }

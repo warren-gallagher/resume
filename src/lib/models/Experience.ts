@@ -196,6 +196,6 @@ I also participated in cost also participated in cost reduction activities for m
     }
 ];
 
-export function getExperience() : Experience[] {
+export async function getExperience() : Promise<Experience[]> {
     return experience;
 }
