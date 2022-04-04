@@ -12,8 +12,12 @@ Chief Technology Officer, Chief Architect, Strategic Product Planner and Softwar
 I am a hands-on researcher and developer who loves to create innovative ways to solve customer problems. 
 I enjoy working with other talented people, participating in teams and providing mentorship.
 
-Most recently I was CTO at Fortress.Legal, which provides a Secure Innovation Hub that automatically organizes and protects 
-innovative companies so that they can grow faster and achieve higher valueations.
+Experienced software developer, architect and researcher. Designed and developed 2 multi-tenant, cloud-hosted SaaS
+systems for https://apxdata.com and https://fortress.legal .
+
+Looking for opportunities where I can be an individual contributor. I can work remotely or hybrid (in Ottawa). 
+My experience as a company founder, executive and manager means I understand the business questions to ask and 
+can contribute to both business and technical answers.
 
 In 2002 I co-founded PointShot Wireless a company created to bring mobile hotspots to environments such as passenger trains. 
 I served as CTO, VP Product Management and VP Engineering at Pointshot.
