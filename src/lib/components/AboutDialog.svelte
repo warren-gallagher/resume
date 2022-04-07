@@ -1,5 +1,7 @@
 
 <script lang="ts">
+    import { getConfig } from '$lib/models/Config';
+
     import { onMount } from 'svelte';
     import { Modal, ModalHeader, ModalBody, Table, Button, ModalFooter } from 'sveltestrap/src';
 
@@ -9,8 +11,11 @@
     let version = 'Unknown';
     let environment = 'Unknown';
     let nodeVersion = 'Unknown';
+    let copyright = 'Unknown';
 
     onMount( async() => {
+        const config = await getConfig();
+        copyright = config.copyright;
         const response1 = await fetch('/api/app-info', {method: 'POST'});
         if( response1.ok ) {
             const apiInfo = await response1.json();
@@ -52,7 +57,7 @@
                 </tr>
                  <tr>
                     <th>Copyright</th>
-                    <td>Copyright &copy; Warren Gallagher 2022, all rights reserved.</td>
+                    <td>{copyright}</td>
                 </tr>
                 <tr>
                     <th>Repository</th>

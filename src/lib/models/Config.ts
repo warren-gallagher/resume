@@ -1,13 +1,15 @@
 export type Config = {
+    copyright: string,
     deploymentURL: string;
     repositoryURL: string;
 };
 
-const contact: Config = {
+const config: Config = {
+    copyright: "Copyright © Warren Gallagher 2022, all rights reserved.",
     deploymentURL: "https://resume.gallaghers.ca",
     repositoryURL: "https://github.com/warren-gallagher/resume/"
 };
 
 export async function getConfig() : Promise<Config> {
-    return contact;
+    return config;
 }

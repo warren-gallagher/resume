@@ -1,12 +1,13 @@
 export type Contact = {
-    name: string;
-    pictureURL: string;
-    twitterURL: string;
-    linkedInURL: string;
-    githubURL: string;
-    emailURL: string;
-    emailAddr: string;
-    mobilePhone: string;
+    name: string,
+    pictureURL: string,
+    twitterURL: string,
+    linkedInURL: string,
+    githubURL: string,
+    emailURL: string,
+    emailAddr: string,
+    mobilePhone: string,
+    mobilePhoneURL: string
 };
 
 const contact: Contact = {
@@ -17,7 +18,8 @@ const contact: Contact = {
     githubURL: "https://github.com/warren-gallagher?tab=repositories/",
     emailURL: "mailto:warren@gallaghers.ca?subject=Resume Inquiry",
     emailAddr: "warren@gallaghers.ca",
-    mobilePhone: "613.791.4987"
+    mobilePhone: "613.791.4987",
+    mobilePhoneURL: "tel:613.791.4987"
 };
 
 export async function getContact() : Promise<Contact> {

@@ -22,7 +22,7 @@
 <svelte:head>
 </svelte:head>
 
-<Navbar color="primary" light expand="md">
+<Navbar color="primary" light expand="md" class="d-print-none">
     <NavbarBrand class="text-white" href="/contact" >Warren Gallagher</NavbarBrand>
     <NavbarToggler class="bg-white" on:click={toggleNavbarClicked} />
     <Collapse bind:isOpen={menuIsOpen} navbar expand="md" on:update={handleCollapseUpdateEvent}>
@@ -40,7 +40,7 @@
                 <NavLink class="text-white" href="/technologies">Technologies</NavLink>
             </NavItem>
             <NavItem>
-                <NavLink class="text-white" href="/print" target="_blank">Print</NavLink>
+                <NavLink class="text-white" href="/print" >Print</NavLink>
             </NavItem>
             <NavItem>
                 <NavLink class="text-white" href="/about" on:click={aboutClicked}><Icon name="info-circle"/></NavLink>

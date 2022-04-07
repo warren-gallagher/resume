@@ -43,7 +43,7 @@
             <td><Icon name="envelope-fill"/><a href={contact.emailURL}>{` ${contact.emailAddr}`}</a></td>
         </tr>
         <tr>
-            <td><Icon name="telephone-fill"/><a href={`tel:${contact.mobilePhone}`}>{contact.mobilePhone}</a></td>
+            <td><Icon name="telephone-fill"/><a href={contact.mobilePhoneURL}>{contact.mobilePhone}</a></td>
         </tr>
         <tr>
             <td><Icon name="github"/><a href={contact.githubURL} target="_blank" >{contact.githubURL}</a></td>
