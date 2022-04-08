@@ -1,5 +1,5 @@
 {
-  "name": "resume",
+  "name": "sveltekit-resume",
   "version": "0.1.4",
   "scripts": {
     "version": "./version.mjs",

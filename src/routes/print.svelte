@@ -97,7 +97,7 @@
             </Container>
         {/each}
 
-        <p class="text-center font-size-xs">Printable Resume generated from interactive resume web site at {config.deploymentURL}</p>
+        <!--p class="text-center font-size-xs">Printable Resume generated from interactive resume web site at {config.deploymentURL}</p-->
         <p class="text-center font-size-xs"><Icon name="github" /> repository available at {config.repositoryURL}</p>
     </Container>
 </div>

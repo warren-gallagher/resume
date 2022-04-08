@@ -12,10 +12,12 @@
     let environment = 'Unknown';
     let nodeVersion = 'Unknown';
     let copyright = 'Unknown';
+    let repository = 'Unknown';
 
     onMount( async() => {
         const config = await getConfig();
         copyright = config.copyright;
+        repository = config.repositoryURL;
         const response1 = await fetch('/api/app-info', {method: 'POST'});
         if( response1.ok ) {
             const apiInfo = await response1.json();
@@ -61,7 +63,7 @@
                 </tr>
                 <tr>
                     <th>Repository</th>
-                    <td><a target="_blank" href="https://github.com/warren-gallagher/resume">https://github.com/warren-gallagher/resume</a></td>
+                    <td><a target="_blank" href={repository}>{repository}</a></td>
                 </tr>
             </tbody>
         </Table>
