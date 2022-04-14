@@ -1,7 +1,6 @@
 
 <script lang="ts">
-    import { getConfig } from '$lib/models/Config';
-
+    import {services} from '$lib/services/services';
     import { onMount } from 'svelte';
     import { Modal, ModalHeader, ModalBody, Table, Button, ModalFooter } from 'sveltestrap/src';
 
@@ -15,7 +14,7 @@
     let repository = 'Unknown';
 
     onMount( async() => {
-        const config = await getConfig();
+        const config = await $services.configService.getConfig();
         copyright = config.copyright;
         repository = config.repositoryURL;
         const response1 = await fetch('/api/app-info', {method: 'POST'});

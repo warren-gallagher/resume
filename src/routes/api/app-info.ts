@@ -1,4 +1,3 @@
-import { append } from 'svelte/internal';
 
 /** @type {import('@sveltejs/kit').RequestHandler} */
 export async function post({request}) {

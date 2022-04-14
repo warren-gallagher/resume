@@ -1,34 +1,13 @@
-<script context="module" lang="ts">
-    import {getConfig} from '$lib/models/Config';
-    import type {Config} from '$lib/models/Config';
-    import {getContact} from '$lib/models/Contact';
-    import type {Contact} from '$lib/models/Contact';
-    import {getProfile} from '$lib/models/Profile';
-    import type {Profile} from '$lib/models/Profile';
-    import {getExperience} from '$lib/models/Experience';
-    import type {Experience} from '$lib/models/Experience';
-    import {getTechnologies} from '$lib/models/Technology';
-    import type {Technology} from '$lib/models/Technology';
-
-    /** @type {import('./pdf').Load} */
-    export async function load({ params, fetch, session, stuff }) {
-        return {
-            status: 200,
-            props: {
-                config: await getConfig(),
-                contact: await getContact(),
-                profile: await getProfile(),
-                experience: await getExperience(),
-                technologies: await getTechnologies()
-            }
-        };
-    }
-</script>
-
 <script lang="ts" >
-    import {onMount} from 'svelte';
     import { Container, Table, Button, Icon } from 'sveltestrap';
     import SvelteMarkdown from 'svelte-markdown';
+    import type {Config} from '$lib/models/Config';
+    import type {Contact} from '$lib/models/Contact';
+    import type {Profile} from '$lib/models/Profile';
+    import type {Experience} from '$lib/models/Experience';
+    import type {Technology} from '$lib/models/Technology';
+    import {onMount} from 'svelte';
+    import {services} from '$lib/services/services';
 
     export let config : Config;
     export let contact: Contact;
@@ -36,11 +15,16 @@
     export let experience: Experience[];
     export let technologies: Technology[];
 
-    onMount(() => {
+    async function onLoad() {
+        config = await $services.configService.getConfig();
+        contact = await $services.contactService.getContact();
+        profile = await $services.profileService.getProfile();
+        experience = await $services.experienceService.getExperience();
+        technologies = await $services.technologyService.getTechnologies();
         setTimeout(function() {
             window.print();
         }, 1000);
-    });
+    }
 
 </script>
 
@@ -56,6 +40,8 @@
     }
 </style>
 
+{#await onLoad()}
+{:then}
 <div class="pt-2">
     <Container>
         <h4 class="text-primary text-center">{contact.name}</h4>
@@ -101,3 +87,4 @@
         <p class="text-center font-size-xs"><Icon name="github" /> repository available at {config.repositoryURL}</p>
     </Container>
 </div>
+{/await}

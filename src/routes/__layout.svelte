@@ -1,9 +1,17 @@
 <script lang="ts">
     import { Navbar, NavbarBrand, NavbarToggler, Collapse, Nav, NavItem, NavLink, DropdownItem, Container, Icon } from 'sveltestrap';
     import AboutDialog from '$lib/components/AboutDialog.svelte';
+    import {services} from '$lib/services/services';
+    import type {Contact} from '$lib/models/Contact';
+
+    export let contact: Contact;
 
     let menuIsOpen = false;
     let showAboutDialog = false;
+
+    async function onLoad() {
+        contact = await $services.contactService.getContact();
+    }
 
     function handleCollapseUpdateEvent(event) {
         menuIsOpen = event.detail.menuIsOpen;
@@ -22,8 +30,10 @@
 <svelte:head>
 </svelte:head>
 
+{#await onLoad()}
+{:then}
 <Navbar color="primary" light expand="md" class="d-print-none">
-    <NavbarBrand class="text-white" href="/contact" >Warren Gallagher</NavbarBrand>
+    <NavbarBrand class="text-white" href="/contact" >{contact.name}</NavbarBrand>
     <NavbarToggler class="bg-white" on:click={toggleNavbarClicked} />
     <Collapse bind:isOpen={menuIsOpen} navbar expand="md" on:update={handleCollapseUpdateEvent}>
         <Nav class="ms-auto" navbar>
@@ -48,7 +58,7 @@
         </Nav>
     </Collapse>
 </Navbar>
-
+{/await}
 <Container fluid >
     <slot>
 

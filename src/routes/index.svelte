@@ -1,23 +1,18 @@
-<script context="module" lang="ts">
-    import {getContact} from '$lib/models/Contact';
-    import type {Contact} from '$lib/models/Contact';
-
-    /** @type {import('./contact').Load} */
-    export async function load({ params, fetch, session, stuff }) {
-        return {
-            status: 200,
-            props: {
-                contact: await getContact()
-            }
-        };
-    }
-  </script>
-
   <script lang="ts">
     import SvelteMarkdown from 'svelte-markdown';
     import { Table, Icon, Image } from 'sveltestrap';
+    import {onMount} from 'svelte';
+    import {services} from '$lib/services/services';
+    import type {Contact} from '$lib/models/Contact';
 
-    export let contact: Contact;
+    let contact : Contact;
+
+    onMount(() => {
+    })
+    
+    async function onLoad() {
+        contact = await $services.contactService.getContact();
+    }
 
 </script>
 
@@ -32,6 +27,8 @@
         text-decoration: none;
     }
 </style>
+{#await onLoad()}
+{:then}
 <div class="text-center">
 <h3>{contact.name} - Contact</h3>
 
@@ -57,3 +54,4 @@
     </tbody>
 </Table>
 </div>
+{/await}
