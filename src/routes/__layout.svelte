@@ -4,7 +4,7 @@
     import {services} from '$lib/services/services';
     import type {Contact} from '$lib/models/Contact';
 
-    export let contact: Contact;
+    let contact: Contact;
 
     let menuIsOpen = false;
     let showAboutDialog = false;
@@ -31,6 +31,7 @@
 </svelte:head>
 
 {#await onLoad()}
+    Loading...
 {:then}
 <Navbar color="primary" light expand="md" class="d-print-none">
     <NavbarBrand class="text-white" href="/contact" >{contact.name}</NavbarBrand>

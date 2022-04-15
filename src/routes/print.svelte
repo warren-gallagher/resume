@@ -9,11 +9,11 @@
     import {onMount} from 'svelte';
     import {services} from '$lib/services/services';
 
-    export let config : Config;
-    export let contact: Contact;
-    export let profile: Profile;
-    export let experience: Experience[];
-    export let technologies: Technology[];
+    let config : Config;
+    let contact: Contact;
+    let profile: Profile;
+    let experience: Experience[];
+    let technologies: Technology[];
 
     async function onLoad() {
         config = await $services.configService.getConfig();
@@ -41,6 +41,7 @@
 </style>
 
 {#await onLoad()}
+    Loading...
 {:then}
 <div class="pt-2">
     <Container>

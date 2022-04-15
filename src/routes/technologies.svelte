@@ -6,8 +6,8 @@
     import {onMount} from 'svelte';
     import {services} from '$lib/services/services';
 
-    export let contact: Contact;
-    export let technologies: Technology[];
+    let contact: Contact;
+    let technologies: Technology[];
 
     async function onLoad() {
         contact = await $services.contactService.getContact();
@@ -20,6 +20,7 @@
 </style>
 
 {#await onLoad()}
+    Loading...
 {:then}
 <div class="text-center">
     <h3>{contact.name} - Technology</h3>

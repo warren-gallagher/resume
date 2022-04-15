@@ -5,8 +5,8 @@
     import {onMount} from 'svelte';
     import {services} from '$lib/services/services';
  
-    export let contact: Contact;
-    export let profile: Profile;
+    let contact: Contact;
+    let profile: Profile;
 
     onMount(() => {
     })
@@ -18,6 +18,7 @@
 </script>
 
 {#await onLoad()}
+    Loading...
 {:then}
 <div class="text-center">
     <h3>{contact.name} - Profile</h3>

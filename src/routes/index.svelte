@@ -6,6 +6,7 @@
     import type {Contact} from '$lib/models/Contact';
 
     let contact : Contact;
+    const mode = import.meta.env.MODE;
 
     onMount(() => {
     })
@@ -28,8 +29,10 @@
     }
 </style>
 {#await onLoad()}
+    Loading...
 {:then}
 <div class="text-center">
+    <h1>{mode}</h1>
 <h3>{contact.name} - Contact</h3>
 
 <img alt={`${contact.name} Photo`} src="/avatar-photo-400x400.jpg" />
