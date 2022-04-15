@@ -21,11 +21,11 @@ git clone git@github.com:warren-gallagher/resume.git
 
 To customize the content of the resume, modify the following files:
 
-* src/lib/models/Config.ts
-* src/lib/models/Contact.ts
-* src/lib/models/Experience.ts
-* src/lib/models/Profile.ts
-* src/lib/models/Technology.ts
+* src/lib/services/ConfigService.ts
+* src/lib/services/ContactService.ts
+* src/lib/services/ExperienceService.ts
+* src/lib/services/ProfileService.ts
+* src/lib/services/TechnologyService.ts
 * static/avatar-photo-400x400.jpg
 
 ### Install developer dependencies
@@ -58,4 +58,4 @@ npm run build
 
 ### Run on Vercel
 
-Commits to the main branch will be automatically built and deployed on Vercel. The deployed app can be reached at: [https://resume.gallaghers.ca](https://resume.gallaghers.ca)
+Commits to the main branch will be automatically built and deployed on Vercel. The deployed app can be reached at: [https://sveltekit-resume-warren-gallagher.vercel.app](https://sveltekit-resume-warren-gallagher.vercel.app)
