@@ -1,16 +1,10 @@
   <script lang="ts">
-    import SvelteMarkdown from 'svelte-markdown';
     import { Table, Icon, Image } from 'sveltestrap';
-    import {onMount} from 'svelte';
     import {services} from '$lib/services/services';
     import type {Contact} from '$lib/models/Contact';
 
     let contact : Contact;
-    const mode = import.meta.env.MODE;
 
-    onMount(() => {
-    })
-    
     async function onLoad() {
         contact = await $services.contactService.getContact();
     }
@@ -32,7 +26,7 @@
     Loading...
 {:then}
 <div class="text-center">
-    <h1>{mode}</h1>
+
 <h3>{contact.name} - Contact</h3>
 
 <img alt={`${contact.name} Photo`} src="/avatar-photo-400x400.jpg" />
