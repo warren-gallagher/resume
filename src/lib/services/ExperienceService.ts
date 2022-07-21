@@ -16,6 +16,22 @@ RedSkyMobile.com - I provided business and technology advisory services prior to
 `
     },
     {
+        companyName: "AffinitiQuest.io",
+        workTitle: "Sr. Software Developer",
+        workDuration: "Apr 2022-Current",
+        markdown:
+  `
+  At AffinitiQuest.io, I am responsible for researching, designing implementing and supporting a SaaS product that
+  gives companies the ability to issue and verify Verifiable Credentials.
+  
+  The user interfaces are implemented using Angular and Bootstrap.
+  
+  The application servers are written in C#, Typescript, and javascript.
+  
+  Deployment is to Microsoft Azure.
+  `
+    },
+    {
         companyName: "Fortress.Legal",
         workTitle: "Chief Technology Officer",
         workDuration: "Nov 2020-Mar 2022",
